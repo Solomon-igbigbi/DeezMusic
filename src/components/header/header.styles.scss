@@ -1,0 +1,54 @@
+.header {
+    background-color: #FFB5A7;
+    width: 100%;
+    height: 185px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+
+    .hero {
+        width: 450px;
+        height: 280px;
+        transform: rotateY(180deg);
+        right: 100px;
+        margin-right: 100px;
+    }
+
+    .toggle {
+        margin-right: 100px;
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+
+        h2 {
+            font-size: 40px;
+            margin: 0px;
+        }
+
+        span {
+            font-size:25px;
+            font-weight: bold;
+            margin: 0px;
+
+            .fas {
+                padding: 0px 5px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .fa-sun {
+                color: yellow;
+            } 
+
+            .fa-moon {
+                color: black;
+            }
+        }
+    }
+}

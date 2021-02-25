@@ -1,0 +1,57 @@
+.nav {
+    width: 10%;
+    background-color: #574FD8;
+    height: 100%;
+    color: white;
+
+
+    .profile-details {
+        width: 100%;
+        margin: 30px auto;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+
+
+        span {
+            font-size: 17px;
+            text-transform: capitalize;
+        }
+        
+
+        .profile-picture {
+            width: 70px;
+            height: 100px;
+            // fill: #FFB5A7;
+            
+        }
+    }
+
+    ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+
+
+
+        .active {
+            background-image: linear-gradient(to right, #7671DC, #574FD8);
+        }
+        
+        li {
+            list-style: none;
+            padding: 15px;
+            padding-left: 30px;
+
+            i {
+                padding: 0px 15px 15px 0px;
+                font-weight: 10px;
+                margin-top: 10px;
+            }
+        }
+
+    }
+}
