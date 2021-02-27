@@ -1,14 +1,17 @@
-import React from 'react'
+import React from 'react';
+
 
 import './song-directory.styles.scss'
 
 import SongPreview from '../song-preview/song-preview.component'
 
-const SongDirectory = () => (
-    <div className="song-directory">
-        <SongPreview title={'Released This Week'}/>
-        <SongPreview title={'Featured Playlist'}/>
-    </div>
-)
+const SongDirectory = () => {
+    return (
+        <div className="song-directory">
+           <SongPreview header={'Released This Week'}/>
+        </div>
+    )
+}
 
-export default SongDirectory;
+
+export default SongDirectory
