@@ -1,0 +1,68 @@
+.playitem {
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    bottom: 0;
+    
+    .playbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+        width: 95%;
+        margin: auto;
+        
+    
+        .music {
+            display: flex;
+            width: 15%;
+            align-items: center;
+            justify-content: center;
+    
+            img {
+                width: 70px;
+                height: 70px;
+                border-radius: 10px;
+            }
+    
+            span {
+                padding: 30px;
+            }
+        }
+    
+        .player {
+            display: flex;
+            width: 15%;
+            justify-content: center;
+            align-items: center;
+            
+            i {
+                padding: 4px;
+                font-size: 20px;
+                color: rgb(155, 155, 155)
+            }
+    
+            .fa-play-circle {
+                font-size: 40px;
+                color: #574FD8;
+            }
+        }
+    
+        hr {
+            width: 50%;
+            height: 0px;
+            color: rgb(155, 155, 155)
+        }
+    
+        .functions{
+            display: flex;
+            width: 15%;
+            justify-content: center;
+            
+            i {
+                padding: 15px;
+                color: rgb(155, 155, 155)
+            }
+        }
+    }
+}

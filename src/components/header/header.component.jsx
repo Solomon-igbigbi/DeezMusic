@@ -8,7 +8,7 @@ const Header = () => (
         <Hero className='hero' />
         <div className="toggle">
             <h2>Your favourite tunes</h2>
-            <span>All <i class="fas fa-sun"></i> and all <i class="fas fa-moon"></i></span>
+            <span>All <i className="fas fa-sun"></i> and all <i className="fas fa-moon"></i></span>
         </div>
     </div>
 );

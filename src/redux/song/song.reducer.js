@@ -5,17 +5,17 @@ const INITIAL_STATE = {
 
 
 const songReducer = (state = INITIAL_STATE, action) => {
-    console.log(state)
     switch (action.type) {
         case 'GET_SONGS':
             return {
                 ...state,
-                latestSongs: action.payload
+                latestSongs: action.payload.tracks.data,
+                latestTracks: action.payload.playlists.data
             }
         case 'GET_TRACKS':
             return {
                 ...state,
-                latestTracks: action.payload
+                latestTracks: action.payload.playlists.data
             }
         default:
             return state;

@@ -7,7 +7,11 @@ import Song from '../song/song.component'
 
 
 const SongPreview = ({ songs, tracks }) => { 
-    console.log(tracks)
+
+    const updateState = (e) => {
+        console.log(e.target)
+    }
+
     return (
     <div className="song-preview">
         <div className="details">
@@ -17,7 +21,7 @@ const SongPreview = ({ songs, tracks }) => {
         <div className='songs'>
             {
                 songs ? songs.map(song => (
-                    <Song id={song.id} {...song} />
+                    <Song onClick={updateState} id={song.id} {...song} />
                 )) : 'Loading'
             }
         </div>
@@ -28,7 +32,18 @@ const SongPreview = ({ songs, tracks }) => {
         <div className='songs'>
             {
                 tracks ? tracks.map(track => (
-                    <Song id={track.id} {...track} />
+                    <Song id={track.id} picture={track.picture} {...track} />
+                )) : 'Loading'
+            }
+        </div>
+        <div className="details">
+            <h4 className="title">Browse</h4>
+            <hr/>
+        </div>
+        <div className='songs'>
+            {
+                tracks ? tracks.map(track => (
+                    <Song id={track.id} picture={track.picture} {...track} />
                 )) : 'Loading'
             }
         </div>

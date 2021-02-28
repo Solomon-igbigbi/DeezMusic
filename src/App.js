@@ -10,14 +10,15 @@ class App extends React.Component {
   
   componentDidMount(){
     const { getSongs, getTracks } = this.props
+    
 
-    fetch('https://cors.bridged.cc/https://api.deezer.com/user/2529/playlists')
+    fetch('https://cors.bridged.cc/https://api.deezer.com/chart')
       .then(res => res.json())
-      .then(data =>  getSongs(data.data))
+      .then(data =>  getSongs(data))
 
-    fetch('https://cors.bridged.cc/https://api.deezer.com/playlist/757807/tracks')
-      .then(res => res.json())
-      .then(data => getTracks(data.data))
+    // fetch('https://cors.bridged.cc/https://api.deezer.com/playlist/757807/tracks')
+    //   .then(res => res.json())
+    //   .then(data => getTracks(data))
   }
 
   render(){
