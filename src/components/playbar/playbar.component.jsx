@@ -6,31 +6,45 @@ import { updatePlayer } from '../../redux/player/play.action'
 import './playbar.styles.scss'
 
 
-const Playbar = ({ player }) => {
-    const { img, title, preview, isPlaying, getSongDetails } = player 
-
+const Playbar = ({ player, getSongDetails  }) => {
+    const { img, title, preview, isPlaying } = player 
+    
     const playSong = (e) => {
-            // audio.play() 
-            console.log(e.target.parentElement.children)
-    }
+        const details = e.target.parentElement.children;
+        const audio = details[3];
+        if(isPlaying === false) {            
+            audio.play();
+            getSongDetails({ 
+                img: img,
+                title: title,
+                isPlaying: true
+            })
 
-    const stopSong = (e) => {
-        // console.log(e.target.parentElement.children)
-        return 'https://this.audio'
-    }
+        } else {
+            console.log(audio)
+            audio.pause()
+            getSongDetails({ 
+                img: img,
+                title: title,
+                preview: audio.CurrentSrc,
+                isPlaying: false
+            })
 
+        }
+           
+    }
     return (
         <div className="playitem">
             <div className="playbar">
                 <div className="music">
                     <img src={img} alt="" className="display"/>
                     <span className="title">{title}</span>
-                </div>;
+                </div>
                 <div className="player">
                     <i className="fas fa-step-backward"></i>
-                    <i onClick={playSong} className="fas fa-play-circle"></i>
+                    <i onClick={playSong} className={ isPlaying ? "fas fa-pause-circle" : "fas fa-play-circle"}></i>
                     <i className="fas fa-step-forward"></i>
-                    <audio src={ isPlaying ? stopSong : preview}></audio>
+                    <audio src={preview}></audio>
                 </div>
                 <hr/>
                 <div className="functions">

@@ -7,17 +7,14 @@ import './song.styles.scss'
 
 const Song = ({ title, album, picture, preview, getSongDetails, player }) => {
     const update  = (e) => {
-        const audio = new Audio(player.preview)
-        audio.pause()
         const details = new Array(e.target.parentElement.children) 
         const newdet = {
             img: details[0][0].currentSrc,
             title: details[0][1].textContent,
             preview: details[0][2].currentSrc,
-            // isPlaying: false
+            isPlaying: false
         }
         getSongDetails(newdet)
-        // console.log(newdet)
     }
 
     return (

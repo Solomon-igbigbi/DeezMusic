@@ -2,7 +2,7 @@ const INITIAL_STATE = {
     img: 'https://www.colorcombos.com/images/colors/663399.png',
     title: 'Nothing to play',
     preview: null,
-    isPlaying: true
+    isPlaying: false
 }
 
 
@@ -13,7 +13,8 @@ const playerReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 img: action.payload.img,
                 title: action.payload.title,
-                preview: action.payload.preview
+                preview: action.payload.preview,
+                isPlaying: action.payload.isPlaying
             }
         default:
             return state;
