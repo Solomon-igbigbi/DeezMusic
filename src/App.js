@@ -9,7 +9,7 @@ import MainPage from './pages/main-page/main-page.component'
 class App extends React.Component {
   
   componentDidMount(){
-    const { getSongs, getTracks } = this.props
+    const { getSongs } = this.props
     
 
     fetch('https://cors.bridged.cc/https://api.deezer.com/chart')
