@@ -1,8 +1,15 @@
 .song-preview {
     width: 100%;
+    height: 80%;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      width: 11px;
 
-    
-
+      body {
+        scrollbar-width: thin;
+        scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+      }
+    }
 
     .details {
         display: flex;
@@ -24,8 +31,6 @@
     .songs {
         display: flex;
         overflow-x: scroll;
-        // overflow-x: scroll;
-        
     }
 
     .songs::-webkit-scrollbar {
@@ -35,13 +40,30 @@
         scrollbar-width: thin;
         scrollbar-color: var(--thumbBG) var(--scrollbarBG);
       }
-      body::-webkit-scrollbar-track {
-        background: var(--scrollbarBG);
+}
+
+@media all and (max-width: 480px) {
+  .song-preview {
+    margin: auto;
+    width: 97%;
+
+    .details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 65px;
+      
+      h4 {
+          width: 300px;
       }
-      body::-webkit-scrollbar-thumb {
-        background-color: var(--thumbBG) ;
-        border-radius: 6px;
-        border: 3px solid var(--scrollbarBG);
+  
+  
+      hr {
+          width: 200px;
+          height: 0px;
       }
+    }
+  }
+  
 }
 

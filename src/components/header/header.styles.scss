@@ -51,4 +51,30 @@
             }
         }
     }
+
+}
+
+@media all and (max-width: 480px) {
+    .header {
+
+        .hero {
+            display: none;
+        }
+
+        .toggle {
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: auto;
+
+
+            h2 {
+                font-size: 30px;
+            }
+        }
+    }
+    
 }

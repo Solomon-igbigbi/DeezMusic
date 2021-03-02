@@ -14,20 +14,20 @@ const Sidebar = () => (
         </div>
         <ul className="nav-links">
             <li className="nav-item active"><i className="fas fa-headphones"></i>
-                Discover
+                <span>Discover</span> 
             </li>
             <li className="nav-item"><i className="fas fa-search"></i>
-                Search
+                <span>Search</span> 
             </li>
             <li className="nav-item"><i className="fas fa-heart"></i>
-                Favorites
+                <span>Favorites</span> 
             </li>
             <li className="nav-item"><i className="fas fa-stream"></i>
-                Playlist
+                <span>Playlist</span> 
             </li>
             <li className="nav-item"><i className="fas fa-calendar-week"></i>
-                Charts
-                </li>
+                <span>Charts</span> 
+            </li>
         </ul>
     </div>
 )

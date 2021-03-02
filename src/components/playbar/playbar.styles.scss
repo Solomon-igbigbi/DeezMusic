@@ -71,3 +71,37 @@
         }
     }
 }
+
+@media all and (max-width: 480px) {
+    .playitem {
+        width: 92%;
+
+        .playbar {
+            hr {
+                display: none;
+            }
+
+            .functions {
+                display: none;
+            }
+
+            .music {
+                display: flex;
+                width: 50%;
+        
+                span {
+                    padding: 10px;
+                }
+            }
+
+            .player {
+                display: flex;
+                width: 50%;
+            }
+    
+        }
+
+
+        
+    }
+}

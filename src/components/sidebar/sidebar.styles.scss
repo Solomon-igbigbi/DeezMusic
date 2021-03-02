@@ -42,9 +42,10 @@
         }
         
         li {
-            list-style: none;
             padding: 15px;
             padding-left: 45px;
+            list-style: none;
+           
 
             i {
                 padding: 0px 15px 15px 0px;
@@ -54,4 +55,39 @@
         }
 
     }
+}
+
+@media all and (max-width: 480px) {
+    .nav {
+        width: 18%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .profile-details {
+            display: none;
+        }
+
+        ul {
+
+            .active {
+                background-image: none;
+            }
+    
+            li {
+                padding: 10px;
+                padding-left: 25px;
+    
+                i {
+                    padding: 2px;
+                    margin-top: 20px;
+                }
+    
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+
 }
