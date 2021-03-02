@@ -21,18 +21,18 @@ const SongPreview = ({ songs, tracks }) => {
         <div className='songs'>
             {
                 songs ? songs.map(song => (
-                    <Song onClick={updateState} id={song.id} {...song} />
+                    <Song onClick={updateState} key={song.id} {...song} />
                 )) : 'Loading'
             }
         </div>
         <div className="details">
-            <h4 className="title">Favorites</h4>
+            <h4 className="title">Featured Playlist</h4>
             <hr/>
         </div>
         <div className='songs'>
             {
                 tracks ? tracks.map(track => (
-                    <Song id={track.id} picture={track.picture} {...track} />
+                    <Song key={track.id} picture={track.picture} {...track} />
                 )) : 'Loading'
             }
         </div>
@@ -43,7 +43,7 @@ const SongPreview = ({ songs, tracks }) => {
         <div className='songs'>
             {
                 tracks ? tracks.map(track => (
-                    <Song id={track.id} picture={track.picture} {...track} />
+                    <Song key={track.id} picture={track.picture} {...track} />
                 )) : 'Loading'
             }
         </div>

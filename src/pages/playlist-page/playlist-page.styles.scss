@@ -1,0 +1,42 @@
+.playlist {
+    width: 90%;
+
+    
+    
+    .overflow {
+        overflow-y: scroll;
+        margin: auto;
+        width: 80%;
+        margin-top: 30px;
+        &::-webkit-scrollbar {
+            width: 11px;
+          }
+
+    
+        
+    }
+
+    .playlistTrack {
+        display: flex;
+        flex-wrap: wrap;
+        height: 700px;
+        
+        
+        
+    }
+
+    .overflow {
+        scrollbar-width: thin;
+        scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+      }
+      body::-webkit-scrollbar-track {
+        background: var(--scrollbarBG);
+      }
+      body::-webkit-scrollbar-thumb {
+        background-color: var(--thumbBG) ;
+        border-radius: 6px;
+        border: 3px solid var(--scrollbarBG);
+      }
+
+    
+}
